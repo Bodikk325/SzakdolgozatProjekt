@@ -1,0 +1,8 @@
+.map-container {
+    position: relative;
+  }
+  
+  .map-image {
+    width: 100%; /* Átméretezhető térkép */
+  }
+  

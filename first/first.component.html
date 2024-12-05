@@ -1,0 +1,10 @@
+<div class="bg-mainBlue min-h-screen z-0 flex flex-row">
+    <div id="blocklyDiv" class="w-[1280px] h-[600px] p-2 rounded-md"></div>
+    <div class="flex flex-col justify-start items-center">
+        <button class="bg-blue-700 text-white font-bold px-5 py-3 rounded-md my-3 w-[200px] hover:bg-white hover:text-black" (click)="runCode()">Kód futtatása</button>
+        <button class="bg-white text-black font-bold px-5 py-3 rounded-md my-3 w-[200px] hover:bg-blue-700 hover:text-white" (click)="next()">Tovább</button>
+    </div>
+</div>
+
+<app-robot class="z-10" [messages]="['És itt is vagyunk a legfontosabb résznél, itt fogjuk a legtöbb időt tölteni!', 'Az első feladatod nagyon egyszerű, nem is kell még kódolnod!', 'Ellenőrizd le, hogy a MicroBit egység megfelelően van-e hozzácsatlakoztatva a számítógépedhez! Ezt úgy tesztelheted le, hogy a nagy kék futtatás gombra kattintasz, és ha kigyulladt az összes lámpa kivéve a középső akkor nagyszerű úton jársz! Kattints a tovább gombra ha igen!', 'Amennyiben nem ez történik úgy kérj segítséget egy felnőttől!']" [showMessages]="true"></app-robot>
+

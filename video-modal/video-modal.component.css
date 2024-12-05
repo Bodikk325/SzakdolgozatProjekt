@@ -1,0 +1,3 @@
+body {
+    overflow: hidden; /* A háttér scrollozásának letiltása, amikor a modális nyitva van */
+  }

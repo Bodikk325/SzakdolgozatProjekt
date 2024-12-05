@@ -1,0 +1,24 @@
+<div class="bg-cyan-900">
+    <img src="map.webp" alt="Térkép" class="">
+    <div *ngFor="let field of fields"  [routerLink]="field.link"
+         >
+        
+          @if (field.label == completedLevel + 1) {
+            <div  class="absolute w-12 h-12 rounded-full text-white font-bold bg-gray-500 text-center leading-[50px] border-2 border-black cursor-pointer"  [ngStyle]="{'left.px': field.position.x, 'top.px': field.position.y}" > 
+              <a >{{ field.label }}</a>
+            </div>
+          }
+          @else if (field.label < completedLevel + 1) {
+            <div  class="absolute w-12 h-12 rounded-full text-white font-bold text-center leading-[50px] border-2 border-black cursor-pointer bg-green-700"  [ngStyle]="{'left.px': field.position.x, 'top.px': field.position.y}" > 
+              <a >{{ field.label }}</a>
+            </div>
+          }
+          @else if (field.label > completedLevel + 1) {
+            <div  class="absolute w-12 h-12 rounded-full text-white font-bold text-center leading-[50px] border-2 border-black cursor-pointer bg-red-700"  [ngStyle]="{'left.px': field.position.x, 'top.px': field.position.y}" > 
+              <a >{{ field.label }}</a>
+            </div>
+          }
+    </div>
+  </div>
+
+<app-robot [messages]="['Köszöntelek a főmenüben!', 'Ez egy nagy játékasztal és szinteket kell teljesítened ahhoz, hogy tovább haladhass!', 'Ha piros egy mező az azt jelenti, hogy még nem teljesítheted azt a küldetést!', 'Ha egy mező zöld akkor azt már teljesítetted!', 'Ha egy mező pedig szürke akkor az a következő küldetésed!', 'Kattints a szürke mezőre!']" [showMessages]="true"></app-robot>

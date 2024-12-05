@@ -1,0 +1,13 @@
+<div class="bg-mainBlue min-h-screen z-0 flex flex-row">
+    <div id="blocklyDiv" class="w-[1280px] h-[600px] p-2 rounded-md"></div>
+    <div class="flex flex-col justify-start items-center">
+        <button class="bg-blue-700 text-white font-bold px-5 py-3 rounded-md my-3 w-[200px] hover:bg-white hover:text-black" (click)="runCode()">Kód futtatása</button>
+        <button class="bg-white text-black font-bold px-5 py-3 rounded-md my-3 w-[200px] hover:bg-blue-700 hover:text-white" (click)="reset()" >Munkafelület tisztítása</button>
+        <button class="bg-white text-black font-bold px-5 py-3 rounded-md my-3 w-[200px] hover:bg-blue-700 hover:text-white" (click)="showVideo2('HetedikMegoldas.mp4')">Segítség kérése</button>
+    </div>
+</div>
+
+<app-video-modal #videoModal></app-video-modal>
+<app-video-modal #videoModal2></app-video-modal>
+<app-robot class="z-10" [messages]="messages" [showMessages]="true"></app-robot>
+

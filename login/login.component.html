@@ -1,0 +1,46 @@
+<div class="flex items-center justify-center h-screen bg-blue-900">
+    <div class="bg-white shadow-lg rounded-lg w-full max-w-md p-8">
+      <!-- Váltó gombok -->
+      <div class="flex justify-between mb-6">
+        <button (click)="showLogin()" class="text-blue-900 font-semibold focus:outline-none">Bejelentkezés</button>
+        <button (click)="showRegister()" class="text-blue-900 font-semibold focus:outline-none">Regisztráció</button>
+      </div>
+      
+      <!-- Bejelentkezési form -->
+      <div *ngIf="isLoginVisible" class="transition-transform duration-500">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">Bejelentkezés</h2>
+        <form (ngSubmit)="handleLogin()">
+          <div class="mb-4">
+            <label for="loginEmail" class="block text-gray-700">Email:</label>
+            <input type="email" [(ngModel)]="loginEmail" name="loginEmail" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#68ccc8]">
+          </div>
+          <div class="mb-6">
+            <label for="loginPassword" class="block text-gray-700">Jelszó:</label>
+            <input type="password" [(ngModel)]="loginPassword" name="loginPassword" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#68ccc8]">
+          </div>
+          <button type="submit" class="w-full bg-[#68ccc8] text-white py-2 rounded-lg font-semibold hover:bg-blue-700">Bejelentkezés</button>
+        </form>
+      </div>
+      
+      <!-- Regisztrációs form -->
+      <div *ngIf="!isLoginVisible" class="transition-transform duration-500">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">Regisztráció</h2>
+        <form (ngSubmit)="handleRegister()">
+          <div class="mb-4">
+            <label for="registerEmail" class="block text-gray-700">Email:</label>
+            <input type="email" [(ngModel)]="registerEmail" name="registerEmail" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#68ccc8]">
+          </div>
+          <div class="mb-4">
+            <label for="registerPassword" class="block text-gray-700">Jelszó:</label>
+            <input type="password" [(ngModel)]="registerPassword" name="registerPassword" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#68ccc8]">
+          </div>
+          <div class="mb-6">
+            <label for="confirmPassword" class="block text-gray-700">Jelszó megerősítése:</label>
+            <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#68ccc8]">
+          </div>
+          <button type="submit" class="w-full bg-[#68ccc8] text-white py-2 rounded-lg font-semibold hover:bg-blue-700">Regisztráció</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

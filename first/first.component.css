@@ -1,0 +1,8 @@
+.matrix-field-editor table {
+    border-collapse: collapse;
+    width: 200px;
+  }
+  .matrix-field-editor td {
+    border: 1px solid black;
+    padding: 5px;
+  }
